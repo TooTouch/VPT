@@ -1,0 +1,21 @@
+SEED: 223
+
+DATASET:
+  datadir: /datasets
+
+OPTIMIZER:
+  opt_name: SGD
+  params:
+    lr: 0.01
+    weight_decay: 0.0001
+
+TRAINING:
+  batch_size: 128
+  test_batch_size: 256
+  epochs: 100
+  log_interval: 1
+  use_scheduler: true
+  use_wandb: true
+
+RESULT:
+  savedir: './saved_model'

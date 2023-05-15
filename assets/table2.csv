@@ -1,0 +1,13 @@
+model,data,prompt_type,prompt_tokens,pretrained,acc
+VIT-B/16 w in1k,CIFAR10,deep,1,in1k,96.6
+VIT-B/16 w in1k,CIFAR10,deep,5,in1k,94.89999999999999
+VIT-B/16 w in1k,CIFAR10,deep,10,in1k,82.0
+VIT-B/16 w in1k,CIFAR10,shallow,1,in1k,42.39
+VIT-B/16 w in1k,CIFAR10,shallow,5,in1k,39.660000000000004
+VIT-B/16 w in1k,CIFAR10,shallow,10,in1k,32.83
+VIT-B/16 w in1k,CIFAR100,deep,1,in1k,76.25
+VIT-B/16 w in1k,CIFAR100,deep,5,in1k,75.11
+VIT-B/16 w in1k,CIFAR100,deep,10,in1k,44.5
+VIT-B/16 w in1k,CIFAR100,shallow,1,in1k,79.4
+VIT-B/16 w in1k,CIFAR100,shallow,5,in1k,78.53
+VIT-B/16 w in1k,CIFAR100,shallow,10,in1k,78.0
