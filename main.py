@@ -60,7 +60,7 @@ def run(cfg):
             pretrained     = True,
         )
     model.to(device)
-    _logger.info('# of params: {}'.format(np.sum([p.numel() for p in model.parameters()])))
+    _logger.info('# of learnable params: {}'.format(np.sum([p.numel() if p.requires_grad else 0 for p in model.parameters()])))
 
     # load dataset
     trainset, testset = __import__('datasets').__dict__[f"load_{cfg['DATASET']['dataname'].lower()}"](

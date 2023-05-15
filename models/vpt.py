@@ -12,6 +12,10 @@ class VPT(nn.Module):
                 prompt_tokens: int = 5, prompt_dropout: float = 0.0, prompt_type: str = 'shallow'):
         super().__init__()
         self.encoder = create_model(modelname, num_classes=num_classes, pretrained=pretrained)
+        # freeze
+        for n, p in self.encoder.named_parameters():
+            if 'head' not in n:
+                p.requires_grad = False
         
         # prompt
         self.prompt_tokens = prompt_tokens  # number of prompted tokens
