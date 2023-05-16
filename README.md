@@ -11,6 +11,10 @@ The code I used in my experiments only references VPT-shallow and VPT-deep, whic
   <img src="https://github.com/TooTouch/VPT/assets/37654013/84cafb9f-e579-4747-87e3-6b4405d1f7fd">
 </p> 
 
+# Environments
+
+- **docker image**: nvcr.io/nvidia/pytorch:22.12-py3
+
 # Run
 
 ```shell
@@ -220,22 +224,29 @@ Contrary to the values in the paper, I found the best performance with 1 prompt,
 
 
 **Table 3**. Ablation on prompt length.
-| DATASET  | MODEL           | Prompt Type   | # Prompt Tokens | Accuracy(%) |
-|:---------|:----------------|:--------------|----------------:|------------:|
-| CIFAR10  | VIT-B/16 w in1k | deep          |               1 |   **96.60** |
-|          |                 |               |               5 |       94.90 |
-|          |                 |               |              10 |       82.00 |
-|          |                 |               |                 |             |
-|          |                 | shallow       |               1 |   **42.39** |
-|          |                 |               |               5 |       39.66 |
-|          |                 |               |              10 |       32.83 |
-|          |                 |               |                 |             |
-| CIFAR100 | VIT-B/16 w in1k | deep          |               1 |   **76.25** |
-|          |                 |               |               5 |       75.11 |
-|          |                 |               |              10 |       44.50 |
-|          |                 |               |                 |             |
-|          |                 | shallow       |               1 |   **79.40** |
-|          |                 |               |               5 |       78.53 |
-|          |                 |               |              10 |       78.00 |
 
-
+| MODEL           | DATASET  | Prompt Type   | # Prompt Tokens | Accuracy(%) |
+|:----------------|:---------|:--------------|----------------:|------------:|
+| VIT-B/16 w in1k | CIFAR10  | shallow       |               1 |       92.53 |
+|                 |          |               |               5 |       93.33 |
+|                 |          |               |              10 |       92.97 |
+|                 |          |               |              50 |   **93.55** |
+|                 |          |               |             100 |       93.26 |
+|                 |          |               |                 |             |
+|                 |          | deep          |               1 |       93.11 |
+|                 |          |               |               5 |       94.07 |
+|                 |          |               |              10 |   **94.12** |
+|                 |          |               |              50 |       92.86 |
+|                 |          |               |             100 |       91.81 |
+|                 |          |               |                 |             |
+|                 | CIFAR100 | shallow       |               1 |       70.45 |
+|                 |          |               |               5 |   **72.94** |
+|                 |          |               |              10 |       72.64 |
+|                 |          |               |              50 |       71.52 |
+|                 |          |               |             100 |       69.74 |
+|                 |          |               |                 |             |
+|                 |          | deep          |               1 |       71.95 |
+|                 |          |               |               5 |   **73.86** |
+|                 |          |               |              10 |       73.23 |
+|                 |          |               |              50 |       67.97 |
+|                 |          |               |             100 |       62.85 |
