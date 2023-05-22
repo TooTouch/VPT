@@ -167,8 +167,6 @@ done
 </p>
 
 
-Since the weights of the pre-trained ViTs are highly dependent on the settings for training, it is necessary to find and compare the optimal values.
-
 
 ## Ablation Study: Number of Prompt Tokens
 
@@ -176,10 +174,6 @@ Since the weights of the pre-trained ViTs are highly dependent on the settings f
     <img src="https://github.com/TooTouch/VPT/blob/main/assets/figure2.jpg?raw=true">
     <br><strong>Figure 2</strong>. Ablation on prompt length.
 </p>
-
-
-Contrary to the values in the paper, I found the best performance with 1 prompt, but this may be due to different data.
-
 
 
 ## Appendix: Tables
